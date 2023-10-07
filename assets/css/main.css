@@ -228,27 +228,6 @@ header {
   margin: 0 auto;
 }
 
-.about-me-container {
-  padding-top: 18rem; /* Adjust the spacing as needed */
-  padding-left: 21rem;
-  text-align: center;
-  color: black;
-  max-width: 800px; /* Set a maximum width for better readability */
-  margin: 0 auto; /* Center the content horizontally */
-}
-
-/* Typography styles */
-.about-me-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.about-me-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-
 /* Responsive styles */
 @media (max-width: 770px) {
 
@@ -298,7 +277,7 @@ header {
 }
 
 @media (min-width: 770px) {
- .content {
+.content {
   display: none;
  }
  
@@ -306,9 +285,8 @@ header {
  .img-wrapper {
   position: absolute;
   bottom: -400px; /* Adjust the bottom position for the desired visual effect */
-  left: 5px;
-  width: 300px;
-  height: 300px; /* Adjust the height for the desired visual effect */
+  left: 20px;
+  height: 350px; /* Adjust the height for the desired visual effect */
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -317,6 +295,8 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
   z-index: -1;
   overflow: hidden;
+  width: calc(10% + 20rem);
+  
 }
 
 .img-wrapper img {
@@ -325,7 +305,7 @@ header {
   object-fit: cover;
 }
 
-.georgi-name {
+.georgi-name, .centered-text {
   font-family: 'Fugaz One', cursive; 
   font-size: 60px;
   color: #333333;
@@ -336,6 +316,7 @@ header {
   justify-content: center;
   justify-content: space-evenly;
   height: 100%;
+  
 }
 
 .white-text {
@@ -358,10 +339,8 @@ header {
   flex-direction: column;
 }
 
-
-   .main-content { 
+ .main-content { 
     font-family: 'Francois One', sans-serif;
-    display: flex;
   }
   .hamburger-button {
     display: none;
@@ -380,9 +359,23 @@ header {
     font-size: 1.2rem;
     margin-left: 20px;
   }
+   
+  .about-me-container {
+    /* Adjust spacing and positioning as needed for larger screens */
+    padding-top: 16rem;
+    padding-left: 27rem;
+    float: right;
+    color: black;
+  }
+   .about-me-text { 
+    line-height: 1.8 ;
+    font-size: 1rem;
+   }
+ 
 }
 
-@media (min-width: 773px) {
-   
-}
+
+
+
+
 
