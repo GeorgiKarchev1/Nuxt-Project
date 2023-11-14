@@ -17,6 +17,7 @@
           <h1 class="ime">Georgi Karchev</h1>
           <p class="opisanie">I am a freelance video editor and developer who likes creating useful software and websites.</p>
         </div>
+        <Whitesidecontent />
       </section>
       <nav class="navbar">
         <div class="logo-container">
@@ -29,23 +30,6 @@
         </button>
       </nav>
     </header>
-    <div class="main-content">
-    <div class="about-me-container">
-      <div class="about-me-text">
-        <h2>About Me</h2>
-        <p>
-          Let me introduce myself, I am Georgi Karchev, 17 years old, from Plovdiv.
-         I am a passionate and self-taught programmer with a strong drive to get ahead in the tech industry. 
-         Before entering the world of programming, I dedicated my time to video processing and video directing, but I figured that would remain as a side thing for now.
-         So if you want to work with me be it programming related, video editing or anything else you can contact me.
-</p>
-        <div class="img-wrapper">
-        <img src="../assets/draham.png" class="lice-brato" alt="moeto lice"/>
-      </div>
-    </div>
-  </div>
-      </div>
-      
     <div class="menu-wrapper" :class="{ 'menu-open': isMenuOpen }">
       <button v-if="isMenuOpen" @click="closeMenu" class="close-button">
         <span>&times;</span>
