@@ -1,5 +1,4 @@
   @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Fugaz+One&family=Shrikhand&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Shrikhand&display=swap'); /* Georgi Karchev font*/
   @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap'); /* Paragraph font */
   * {
     margin: 0;
@@ -232,7 +231,7 @@
   @media (max-width: 770px) {
 
     .diagonal-background::before {
-      background: #000000;
+      content: none;
       transform: none;
     }
     header {
@@ -273,7 +272,7 @@
     .desktop-nav { 
       display: none;
     }
-
+   
   }
 
   @media (min-width: 770px) {
