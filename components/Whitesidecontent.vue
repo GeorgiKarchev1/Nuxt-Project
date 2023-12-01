@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="white-side-content" :class="{ 'show-content': isContentVisible }">
-      <img class="img" src="/assets/draham.png" alt="Image">
+      <img class="img" src="../assets/draham.png" alt="Image" id="me">
       <div class="text">
         <h1>About me</h1>
         <p>Hello, I'm Georgi Karchev, 17 years old from Plovdiv. Programming is my passion, and i want to develop it professionally. My goal is to create something unique and personal in the field of software development. I actively search opportunities for learning, practice, and connecting with new people who share similar interests.</p>
@@ -40,7 +40,7 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding-top: 42rem;
+  padding-top: 44rem;
   padding-left: 0.5rem;
   align-items: center;
   opacity: 0;
@@ -74,7 +74,7 @@ h1 {
 }
 
 /* Media query */
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .white-side-content {
     display: none;
   }
@@ -86,6 +86,16 @@ h1 {
     width: 50%;
   }
 }
+
+
+@media (min-width: 882px) {
+  .text { 
+
+  }
+}
+
+
+
 
 @media (min-width: 1268px) {
   .text { 

@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <header>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-WP8cpeFjEBxum5zJpA6lxIsb7MbCkFwyOaAAvm3Xl5nIgUcUB5z9pKEmw8l+I3UGBrft3+i4Oe18fjstlmCi/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <nav class="desktop-nav">
-        <nuxt-link to="#whiteside-content" class="desktop-nav-link">Home</nuxt-link>
-        <nuxt-link to="/portfolio" class="desktop-nav-link">Portfolio</nuxt-link>
+        <nuxt-link to="#me" class="desktop-nav-link">Home</nuxt-link>
+        <nuxt-link to="/portfolio" class="desktop-nav-link"
+          >Portfolio</nuxt-link
+        >
         <nuxt-link to="/contact" class="desktop-nav-link">Contact</nuxt-link>
       </nav>
       <section class="diagonal-background">
@@ -13,25 +17,36 @@
             <span class="white-text">Karchev</span>
           </h1>
         </div>
-        <div class="content">
-          <h1 class="ime">Georgi Karchev</h1>
-          <p class="opisanie">I am a freelance video editor and developer who likes creating useful software and websites.</p>
-        </div>
         <section id="whiteside-content">
           <Whitesidecontent />
         </section>
       </section>
       <nav class="navbar">
         <div class="logo-container">
-          <img :src="logoImage" alt="logo" class="logo">
+          <img :src="logoImage" alt="logo" class="logo" />
         </div>
-        <button @click="toggleMenu" class="hamburger-button" :class="{ 'active': isMenuOpen }">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
+        <button
+        @click="toggleMenu"
+        class="hamburger-button"
+        :class="{ active: isMenuOpen }"
+        >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="content">
+   <h1 class="georgi">GEORGI</h1>
+   <h1 class="karchev">KARCHEV</h1>
+  </div>
+<div class="social-buttons">
+  <a href="URL_za_LINKEDIN" target="_blank" class="social-button linkedin"><i class="fab fa-linkedin"></i></a>
+<a href="URL_za_INSTAGRAM" target="_blank" class="social-button instagram"><i class="fab fa-instagram"></i></a>
+<a href="URL_za_GITHUB" target="_blank" class="social-button github"><i class="fab fa-github"></i></a>
+<a href="mailto:EMAIL" class="social-button email"><i class="fas fa-envelope"></i></a>
+
+</div>
     <div class="menu-wrapper" :class="{ 'menu-open': isMenuOpen }">
       <button v-if="isMenuOpen" @click="closeMenu" class="close-button">
         <span>&times;</span>
@@ -40,9 +55,18 @@
         <!-- Add the v-show directive -->
         <ul class="menu">
           <li v-for="(item, index) in menuItems" :key="index" class="menu-item">
-            <nuxt-link v-if="item === 'About'" to="/about" class="menu-link">{{ item }}</nuxt-link>
-            <nuxt-link v-else-if="item === 'Portfolio'" to="/portfolio" class="menu-link">{{ item }}</nuxt-link>
-            <a v-else href="#" class="menu-link" @click="closeMenu">{{ item }}</a>
+            <nuxt-link v-if="item === 'About'" to="/about" class="menu-link">{{
+              item
+            }}</nuxt-link>
+            <nuxt-link
+              v-else-if="item === 'Portfolio'"
+              to="/portfolio"
+              class="menu-link"
+              >{{ item }}</nuxt-link
+            >
+            <a v-else href="#" class="menu-link" @click="closeMenu">{{
+              item
+            }}</a>
           </li>
         </ul>
       </div>
@@ -53,7 +77,7 @@
 <script>
 import gotovoLogo from '../assets/gotovo_logo_izrod1.png';
 import theRealOne from '../assets/the real one.png';
-import "@/assets/css/main.css";
+import '@/assets/css/main.css';
 
 export default {
   data() {
@@ -66,7 +90,7 @@ export default {
 
   methods: {
     checkWindowSize() {
-      if (window.innerWidth <= 770) {
+      if (window.innerWidth <= 768) {
         this.logoImage = theRealOne;
       } else {
         this.logoImage = gotovoLogo;
