@@ -39,14 +39,13 @@
   <div class="content">
    <h1 class="georgi">GEORGI</h1>
    <h1 class="karchev">KARCHEV</h1>
+   <div class="social-buttons">
+     <UButton><Icon name="uil:github" color="white" class="git"/></UButton>
+     <UButton><Icon name="fa6-brands:linkedin" color="white" class="linkding"/></UButton>
+     <UButton><Icon name="material-symbols:mail" color="white" class="mail"/></UButton>
+     <Ubutton><Icon name="mdi:instagram" color="white" class= "insta"/></Ubutton>
+ </div>
   </div>
-<div class="social-buttons">
-  <a href="URL_za_LINKEDIN" target="_blank" class="social-button linkedin"><i class="fab fa-linkedin"></i></a>
-<a href="URL_za_INSTAGRAM" target="_blank" class="social-button instagram"><i class="fab fa-instagram"></i></a>
-<a href="URL_za_GITHUB" target="_blank" class="social-button github"><i class="fab fa-github"></i></a>
-<a href="mailto:EMAIL" class="social-button email"><i class="fas fa-envelope"></i></a>
-
-</div>
     <div class="menu-wrapper" :class="{ 'menu-open': isMenuOpen }">
       <button v-if="isMenuOpen" @click="closeMenu" class="close-button">
         <span>&times;</span>
@@ -126,4 +125,6 @@ export default {
     window.removeEventListener('resize', this.checkWindowSize);
   },
 };
+
+
 </script>
