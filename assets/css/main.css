@@ -331,6 +331,19 @@ header {
     }
   }
  
-   
+  .social-buttons {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .social-buttons UButton {
+    margin: 0 15px; /* Променете отстоянието между иконите, ако е необходимо */
+  }
+  
+ 
+  
 
 }

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <header>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-WP8cpeFjEBxum5zJpA6lxIsb7MbCkFwyOaAAvm3Xl5nIgUcUB5z9pKEmw8l+I3UGBrft3+i4Oe18fjstlmCi/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <nav class="desktop-nav">
         <nuxt-link to="#me" class="desktop-nav-link">Home</nuxt-link>
@@ -40,11 +39,11 @@
    <h1 class="georgi">GEORGI</h1>
    <h1 class="karchev">KARCHEV</h1>
    <div class="social-buttons">
-     <UButton><Icon name="uil:github" color="white" class="git"/></UButton>
-     <UButton><Icon name="fa6-brands:linkedin" color="white" class="linkding"/></UButton>
-     <UButton><Icon name="material-symbols:mail" color="white" class="mail"/></UButton>
-     <Ubutton><Icon name="mdi:instagram" color="white" class= "insta"/></Ubutton>
- </div>
+  <UButton @click="goToGitHub"><Icon name="uil:github" color="white" class="git"/></UButton>
+  <UButton @click="goToLinkedIn"><Icon name="fa6-brands:linkedin" color="white" class="linkding"/></UButton>
+  <UButton @click="goToEmail"><Icon name="material-symbols:mail" color="white" class="mail"/></UButton>
+  <UButton @click="goToInstagram"><Icon name="mdi:instagram" color="white" class="insta"/></UButton>
+</div>
   </div>
     <div class="menu-wrapper" :class="{ 'menu-open': isMenuOpen }">
       <button v-if="isMenuOpen" @click="closeMenu" class="close-button">
@@ -104,15 +103,20 @@ export default {
       this.isMenuOpen = false;
     },
 
-    scrollToSection(sectionId) {
-      console.log('Scrolling to section:', sectionId);
-      const section = document.getElementById(sectionId);
-      if (section) {
-        window.scrollTo({
-          top: section.offsetTop,
-          behavior: 'smooth',
-        });
-      }
+    goToGitHub() {
+      window.open('https://github.com/your-github-username', '_blank');
+    },
+
+    goToLinkedIn() {
+      window.open('https://www.linkedin.com/in/your-linkedin-username', '_blank');
+    },
+
+    goToEmail() {
+      this.$router.push("/email");
+    },
+
+    goToInstagram() {
+      window.open('https://www.instagram.com/your-instagram-username', '_blank');
     },
   },
 
@@ -125,6 +129,4 @@ export default {
     window.removeEventListener('resize', this.checkWindowSize);
   },
 };
-
-
 </script>
