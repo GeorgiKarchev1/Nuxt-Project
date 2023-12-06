@@ -330,7 +330,6 @@ header {
       transform: translateX(0);
     }
   }
- 
   .social-buttons {
     font-size: 2rem;
     display: flex;
@@ -339,11 +338,12 @@ header {
     padding-top: 1rem;
   }
   
-  .social-buttons UButton {
+  .social-buttons button {
     margin: 0 15px; /* Променете отстоянието между иконите, ако е необходимо */
+    
   }
   
- 
-  
-
+  .git, .linkding, .mail, .insta {
+    font-size: 2rem; /* Променете размера, според вашите предпочитания */
+  }
 }

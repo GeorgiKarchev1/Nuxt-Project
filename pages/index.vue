@@ -3,11 +3,13 @@
     <header>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <nav class="desktop-nav">
+        <client-only>
         <nuxt-link to="#me" class="desktop-nav-link">Home</nuxt-link>
         <nuxt-link to="/portfolio" class="desktop-nav-link"
           >Portfolio</nuxt-link
         >
         <nuxt-link to="/contact" class="desktop-nav-link">Contact</nuxt-link>
+        </client-only>
       </nav>
       <section class="diagonal-background">
         <div class="centered-text">
@@ -39,10 +41,10 @@
    <h1 class="georgi">GEORGI</h1>
    <h1 class="karchev">KARCHEV</h1>
    <div class="social-buttons">
-  <UButton @click="goToGitHub"><Icon name="uil:github" color="white" class="git"/></UButton>
-  <UButton @click="goToLinkedIn"><Icon name="fa6-brands:linkedin" color="white" class="linkding"/></UButton>
-  <UButton @click="goToEmail"><Icon name="material-symbols:mail" color="white" class="mail"/></UButton>
-  <UButton @click="goToInstagram"><Icon name="mdi:instagram" color="white" class="insta"/></UButton>
+  <button @click="goToGitHub"><Icon name="uil:github" color="black" class="git"/></button>
+  <button @click="goToLinkedIn"><Icon name="fa6-brands:linkedin" color="black" class="linkding"/></button>
+  <button @click="goToEmail"><Icon name="material-symbols:mail" color="black" class="mail"/></button>
+  <button @click="goToInstagram"><Icon name="mdi:instagram" color="black" class="insta"/></button>
 </div>
   </div>
     <div class="menu-wrapper" :class="{ 'menu-open': isMenuOpen }">
@@ -53,6 +55,7 @@
         <!-- Add the v-show directive -->
         <ul class="menu">
           <li v-for="(item, index) in menuItems" :key="index" class="menu-item">
+            <client-only>
             <nuxt-link v-if="item === 'About'" to="/about" class="menu-link">{{
               item
             }}</nuxt-link>
@@ -60,11 +63,11 @@
               v-else-if="item === 'Portfolio'"
               to="/portfolio"
               class="menu-link"
-              >{{ item }}</nuxt-link
-            >
-            <a v-else href="#" class="menu-link" @click="closeMenu">{{
-              item
-            }}</a>
+              >{{ item }}</nuxt-link>
+              <a v-else href="#" class="menu-link" @click="closeMenu">{{
+                item
+              }}</a>
+              </client-only>
           </li>
         </ul>
       </div>
