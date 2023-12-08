@@ -41,7 +41,7 @@ header {
   left: 0;
   width: 100%;
   padding: 10px;
-  z-index: 2;
+  z-index: 1000;
   background-color: transparent;
 }
 
@@ -160,6 +160,7 @@ header {
   position: relative;
   overflow: hidden;
   min-height: 180vh;
+  pointer-events: none;
 }
 
 .diagonal-background::before {
@@ -331,7 +332,6 @@ header {
     }
   }
   .social-buttons {
-    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

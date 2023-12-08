@@ -18,9 +18,7 @@
             <span class="white-text">Karchev</span>
           </h1>
         </div>
-        <section id="whiteside-content">
           <Whitesidecontent />
-        </section>
       </section>
       <nav class="navbar">
         <div class="logo-container">
@@ -40,12 +38,12 @@
   <div class="content">
    <h1 class="georgi">GEORGI</h1>
    <h1 class="karchev">KARCHEV</h1>
-   <div class="social-buttons">
-  <button @click="goToGitHub"><Icon name="uil:github" color="black" class="git"/></button>
-  <button @click="goToLinkedIn"><Icon name="fa6-brands:linkedin" color="black" class="linkding"/></button>
-  <button @click="goToEmail"><Icon name="material-symbols:mail" color="black" class="mail"/></button>
-  <button @click="goToInstagram"><Icon name="mdi:instagram" color="black" class="insta"/></button>
-</div>
+  </div>
+  <div class="social-buttons">
+    <button @click="goToGitHub"><Icon name="uil:github" color="black" class="git"/></button>
+    <button @click="goToLinkedIn"><Icon name="fa6-brands:linkedin" color="black" class="linkding"/></button>
+    <button @click="goToEmail"><Icon name="material-symbols:mail" color="black" class="mail"/></button>
+    <button @click="goToInstagram"><Icon name="mdi:instagram" color="black" class="insta"/></button>
   </div>
     <div class="menu-wrapper" :class="{ 'menu-open': isMenuOpen }">
       <button v-if="isMenuOpen" @click="closeMenu" class="close-button">
@@ -107,18 +105,22 @@ export default {
     },
 
     goToGitHub() {
+      console.log('Clicked on GitHub button'); // Добавен дебъг
       window.open('https://github.com/your-github-username', '_blank');
     },
 
     goToLinkedIn() {
+      console.log('Clicked on LinkedIn button'); // Добавен дебъг
       window.open('https://www.linkedin.com/in/your-linkedin-username', '_blank');
     },
 
     goToEmail() {
+      console.log('Clicked on Email button'); // Добавен дебъг
       this.$router.push("/email");
     },
 
     goToInstagram() {
+      console.log('Clicked on Instagram button'); // Добавен дебъг
       window.open('https://www.instagram.com/your-instagram-username', '_blank');
     },
   },
